@@ -1,10 +1,10 @@
 Name:           anaconda-installclass-tigeros
-Version:        27
+Version:        28
 Release:        1%{?dist}
 Summary:        @DISTRO_NAME@ installclass for Anaconda
 
 License:        GPLv2+
-URL:            https://github.com/RITlug/TigerOS/
+URL:            https://github.com/RITlug/anaconda-installclass-tigeros
 Source0:        tigeros.py
 
 BuildRequires:  anaconda-core
@@ -17,14 +17,7 @@ Supplements:    (tigeros-release and anaconda-core)
 This package contains the installclass for TigerOS for
 Anaconda.
 
-%prep
-# nothing to prep
-
-%build
-# Nothing to build
-
 %install
-# Install the installclass file
 install -Dpm 0644 %{SOURCE0} %{buildroot}%{python3_sitearch}/pyanaconda/installclasses/tigeros.py
 
 %files
@@ -32,3 +25,6 @@ install -Dpm 0644 %{SOURCE0} %{buildroot}%{python3_sitearch}/pyanaconda/installc
 %{python3_sitearch}/pyanaconda/installclasses/__pycache__/tigeros.*
 
 %changelog
+* Wed May 16 2018 Tim Zabel <tjz8659@rit.edu> - 28-1
+- Fedora 28 build
+- removed unneeded build and prep segments
