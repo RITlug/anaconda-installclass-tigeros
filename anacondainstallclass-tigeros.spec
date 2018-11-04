@@ -1,5 +1,5 @@
 Name:           anaconda-installclass-tigeros
-Version:        28
+Version:        29
 Release:        1%{?dist}
 Summary:        @DISTRO_NAME@ installclass for Anaconda
 
@@ -25,6 +25,9 @@ install -Dpm 0644 %{SOURCE0} %{buildroot}%{python3_sitearch}/pyanaconda/installc
 %{python3_sitearch}/pyanaconda/installclasses/__pycache__/tigeros.*
 
 %changelog
+* Sun Nov 04 2018 Tim Zabel <tjz8659@rit.edu> - 29-1
+- Fedora 29 build
+
 * Wed May 16 2018 Tim Zabel <tjz8659@rit.edu> - 28-1
 - Fedora 28 build
 - removed unneeded build and prep segments
